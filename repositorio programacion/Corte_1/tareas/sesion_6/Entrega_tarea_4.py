@@ -23,8 +23,6 @@ while True:
         n2=int(input('ingrese el segundo numero: '))
         for i in range(i,n1):
             producto=producto+n2
-            if n1< 0 or n2<0:
-                print('el producto es:','-',producto)
         print('el producto es:',producto)
     
     elif(a.lower()=='tres') or (a=='3'):
