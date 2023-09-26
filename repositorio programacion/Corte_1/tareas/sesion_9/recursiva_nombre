@@ -1,0 +1,14 @@
+def posiciones(a, b, index=0):
+    if not a:
+        return []
+    posicion = a.find(b)
+    if posicion == -1:
+        return [index + a.find(b)] if a.find(b) != -1 else []
+    posiciones = [index + posicion] + posiciones(a[posicion + 1:], b, index + posicion + 1)
+    return posiciones
+cadena_a = input('ingrese una frase ')
+cadena_b = input('ingrese el elemento del cual desea saber la posicion ')
+
+posiciones = posiciones(cadena_a, cadena_b)
+print('Las posiciones donde se encuentra ',cadena_b,' en ',cadena_a,' son:')
+print(posiciones)
